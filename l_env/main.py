@@ -29,10 +29,15 @@ def main():
 
     
     device = input('Введите имя устройства: ')
-    param = input('Введите имя параметра: ')
+    param_list = [k for k in london_co[device].keys()]
+    param_list_str = ', '.join(param_list)
+    param = input(f'Введите имя параметра({param_list_str}): ').lower()
+    if param in param_list:
+        print(london_co[device][param])
+    else:
+        print('Такого параметра нет')
+ 
 
-    print(london_co[device][param])
- 
- 
+
 if __name__ == '__main__':
     main()
