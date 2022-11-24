@@ -25,10 +25,13 @@ def main():
         }
     }
 
-    
+   
+
     
     device = input('Введите имя устройства: ')
-    print(london_co[device])
+    param = input('Введите имя параметра: ')
+
+    print(london_co[device][param])
  
  
 if __name__ == '__main__':
